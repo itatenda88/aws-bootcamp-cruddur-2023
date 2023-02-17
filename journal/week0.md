@@ -1,8 +1,8 @@
 # Week 0 — Billing and Architecture
 
-Hey there! So for this week has been about billing for the AWS services we'll be using throughout the bootcamp. And let me tell you, the pricing of these services really depends on which region you select. I did some digging and found out that Northern Virginia and Ohio are the cheapest, followed by Oregon and Mumbai. Of course, there are other things to consider when making this decision, but I will be basing my decision on  pricing and service availability.
+Ola! So for this week has been about billing for the AWS services we'll be using throughout the bootcamp. I learned the pricing of these services really depends on which region you select. I did some digging and found out that Northern Virginia and Ohio are the cheapest, followed by Oregon and Mumbai. Of course, there are other things to consider when making this decision, but I will be basing my decision on  pricing and service availability.
 
-Now, to make sure I don't go over our usage and costs, I've set up some handy tools within AWS, like Budget Alerts and a CloudWatch Alarm with SNS to send me notifications. And the best part? Since my account is still pretty new, I can use some of these services for free under the free tier! But just in case, these alerts and the alarm will keep me in the loop so there won't be any unexpected surprises. Unless, of course, I forget to check my email :D
+Now, to make sure I don't go over our usage and costs, I've set up some handy tools within AWS, like Budget Alerts and a CloudWatch Alarm with SNS to send me notifications. And the best part? Since my account is still pretty new, I can use some of these services for free under the free tier! I love a freebie! But just in case, these alerts and the alarm will keep me in the loop so there won't be any unexpected surprises. Unless, of course, I forget to check my email :D
 
 ## Completed Assignments:
 
@@ -62,7 +62,7 @@ Anyways, we move...
 
 #### Requirements
 
-* Micro services
+* Microservices
 * Frontend using JS with React
 * Backend using Python with flask
 * APIs
