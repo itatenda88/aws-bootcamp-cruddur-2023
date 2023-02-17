@@ -56,7 +56,7 @@ Alright, buckle up folks, because we're about to dive into the heart of this pro
 
 Now is probably the best time for a disclaimer: I AM NOT A SOLUTIONS ARCHITECT... YET, I AM HERE TO LEARN! So, if you see anything that looks wonky, just remember - I'm not a professional yet.
 
-Now, I may have taken a few liberties with these diagrams and borrowed some (most **cough**) ideas from class demos, but hey, imitation is the sincerest form of flattery, right? On the real though, our instructors are super chill, not only do they not mind, they encouraged the plagerism lol
+Now, I may have taken a few liberties with these diagrams and borrowed some (most **cough**) ideas from class demos, but hey, imitation is the sincerest form of flattery, right? On the real though, our instructors are super chill, not only do they not mind, they encouraged the plagerism for learning purposes.
 
 Anyways, we move...
 
