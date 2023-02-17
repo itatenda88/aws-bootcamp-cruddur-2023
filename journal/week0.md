@@ -1,4 +1,4 @@
-# pWeek 0 — Billing and Architecture
+# Week 0 — Billing and Architecture
 
 Hey there! So for this week has been about billing for the AWS services we'll be using throughout the bootcamp. And let me tell you, the pricing of these services really depends on which region you select. I did some digging and found out that Northern Virginia and Ohio are the cheapest, followed by Oregon and Mumbai. Of course, there are other things to consider when making this decision, but I will be basing my decision on  pricing and service availability.
 
