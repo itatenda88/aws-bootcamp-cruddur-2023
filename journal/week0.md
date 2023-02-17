@@ -14,30 +14,27 @@ We're responsible for considering security concerns, even if it's not a top prio
 
 I had an existing AWS account with a single IAM User that I created a while back. I'll be using this account throughout the course and have add permissions as needed. For now, I only needed billing permission, so I created a Role and attached it to an admin group, then added my user to that group. Oh, and enabled MFA for extra layer of security.
 
-
-![](assets/20230217_191830_IAM_User with MFA enabled.png)
+![IAM User with MFA enabled](https://user-images.githubusercontent.com/65119027/219777870-0c2c318d-e611-47f1-b74e-0da741f205b0.png)
 
 
 I also created Access Keys, which give programmatic access to the account. I'm using these keys in gitpod to control my AWS environment.
 
-
-![](assets/20230217_191921_ProgrammaticAccess_For IAM.png)
-
+![ProgrammaticAccess For IAM](https://user-images.githubusercontent.com/65119027/219777245-cf34d7c6-6028-457b-9629-7b898906479b.png)
 
 ###### Billing Alerts
 
 1. I set my monthly budget at $20, which is pretty low, but I can always adjust it if needed. I also set up a usage alarm for EC2 instances to keep track of any unexpected spikes.
 
-![](assets/20230217_192442_Cost_Usage Budgets.png)
+![Cost Usage Budgets](https://user-images.githubusercontent.com/65119027/219778524-d6e3e833-366c-4b9b-bc3c-2037f0de0c24.png)
 
-1. While the budget alert can also function as a billing alarm, I wanted to practice using CloudWatch and see how it works. So, I set up a single billing alarm and opted for SNS for notification. I may disable it if it drives up costs, but for now, it's good to have some extra visibility.
+2. While the budget alert can also function as a billing alarm, I wanted to practice using CloudWatch and see how it works. So, I set up a single billing alarm and opted for SNS for notification. I may disable it if it drives up costs, but for now, it's good to have some extra visibility.
 
-![](assets/20230217_192325_CloudWatchBillingAlarm.png)
+![CloudWatchBillingAlarm](https://user-images.githubusercontent.com/65119027/219780203-0675cf0b-ff89-47a6-9371-9ffea340cffe.png)
 
 
 ###### Gitpod
 
-So listen, gitpod was a revelation that I was super chuffed to learn about ! Had not heard or used it until this point. To be fair though, I'm new to this field, I have a lot to learn and discover but damn I love this one! If you are just hearing about this tool like me, Gitpod is a cloud-based integrated development environment (IDE) that allows developers to write, test, and deploy code from a web browser. Some of it's advantages include:
+Gitpod is such a game-changer for me. It's basically a cloud-based IDE that lets you do all your coding, testing, and deployment from the comfort of your web browser! The best part is that it's super easy to use and has some amazing features like workspace sharing, automated backups, and collaboration tools. Plus, it integrates with all the fav tools like GitHub, GitLab and whatnot! Clutch!
 
 * Quick and easy setup
 * Centralized development environment
@@ -45,7 +42,9 @@ So listen, gitpod was a revelation that I was super chuffed to learn about ! Had
 * Accessible from anywhere with an internet connection
 * Easy collaboration with team members
 
-To get Gitpod extension on your GitHub, just head over to the GitHub Marketplace, look up the Gitpod extension, and install it. After that, you can simply click the "Gitpod" button in any repository to start a fully functional development environment in your web browser. Gitpod automates the configuration process and offers various tools, including automatic workspace backups, collaborative editing, and workspace sharing, to provide a smooth and streamlined development experience.
+To get Gitpod on GitHub, go to GitHub Marketplace and install the Gitpod extension. Click "Gitpod" button in any repo to start a fully functional environment in your web browser and viola! Try it if you are just hearing about it too.
+
+![Gitpod extension](https://user-images.githubusercontent.com/65119027/219779314-681eb93f-2ab6-4ff5-98a5-bf9519929d27.png)
 
 Cloudshell 
 
