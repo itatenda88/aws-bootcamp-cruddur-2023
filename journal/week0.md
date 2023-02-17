@@ -1,4 +1,4 @@
-# Week 0 — Billing and Architecture
+# pWeek 0 — Billing and Architecture
 
 Hey there! So for this week has been about billing for the AWS services we'll be using throughout the bootcamp. And let me tell you, the pricing of these services really depends on which region you select. I did some digging and found out that Northern Virginia and Ohio are the cheapest, followed by Oregon and Mumbai. Of course, there are other things to consider when making this decision, but I will be basing my decision on  pricing and service availability.
 
@@ -14,10 +14,9 @@ We're responsible for considering security concerns, even if it's not a top prio
 
 I had an existing AWS account with a single IAM User that I created a while back. I'll be using this account throughout the course and have add permissions as needed. For now, I only needed billing permission, so I created a Role and attached it to an admin group, then added my user to that group. Oh, and enabled MFA for extra layer of security.
 
-![IAM User with MFA enabled](https://user-images.githubusercontent.com/65119027/219777870-0c2c318d-e611-47f1-b74e-0da741f205b0.png)
+![IAM User with MFA enabled](https://user-images.githubusercontent.com/65119027/219781915-258d9f65-d816-47a1-ac41-95d52b6f115b.png)
 
-
-I also created Access Keys, which give programmatic access to the account. I'm using these keys in gitpod to control my AWS environment.
+I also created Access Keys, which give programmatic access to the account. I'm using these keys in gitpod to control my AWS environment. AWS access keys are like a username and password, used to interact with AWS services and resources programmatically, such as through the AWS CLI or SDKs. They consist of an access key ID and secret access key, and can be generated and managed through the AWS Management Console, CLI, or SDKs. Access keys should be kept secure and not shared with unauthorized individuals or applications.
 
 ![ProgrammaticAccess For IAM](https://user-images.githubusercontent.com/65119027/219777245-cf34d7c6-6028-457b-9629-7b898906479b.png)
 
@@ -30,7 +29,6 @@ I also created Access Keys, which give programmatic access to the account. I'm u
 2. While the budget alert can also function as a billing alarm, I wanted to practice using CloudWatch and see how it works. So, I set up a single billing alarm and opted for SNS for notification. I may disable it if it drives up costs, but for now, it's good to have some extra visibility.
 
 ![CloudWatchBillingAlarm](https://user-images.githubusercontent.com/65119027/219780203-0675cf0b-ff89-47a6-9371-9ffea340cffe.png)
-
 
 ###### Gitpod
 
@@ -46,11 +44,43 @@ To get Gitpod on GitHub, go to GitHub Marketplace and install the Gitpod extensi
 
 ![Gitpod extension](https://user-images.githubusercontent.com/65119027/219779314-681eb93f-2ab6-4ff5-98a5-bf9519929d27.png)
 
-Cloudshell 
+###### Cloudshell
 
-Installed cloudshell in termainal. I'm now able to access my AWS account from the terminal in gitpod(insert image)
+Next task, Cloudshell. Since attempting a Linux course (which I will get back to at some point), I have been obsessed with doing EVERYTHING in the in CLI. Not a reason to base a career choice on but it's one of the main reasons I want to get into DevOps lol. Anyway...AWS Cloudshell. What is it you may (not) ask?
 
-Completed conceptual architecture diagram. This is one task I struggle with as I'm still trying to wrap my head around the project, deciding components without going overboard and leaving out important stuff has been challenging. I ended up going almost 1:1 with Andrew's diagram from class. Click the link below.
-[https://lucid.app/documents/view/fdebe2bb-0e59-4cf9-a574-2bdbc290720](https://lucid.app/documents/view/fdebe2bb-0e59-4cf9-a574-2bdbc290720)
+It's a super cool environment provided by AWS that offers a preconfigured shell for the AWS CLI and other tools, making it easy to run AWS CLI commands without having to install and configure anything on your local machine. Using CloudShell in Gitpod terminal is as simple as opening the terminal, installing it (see AWS documentation for this) and typing in your AWS CLI commands. Just remember that you'll need to have your Access keys on hand to access your AWS environment.
 
-Went with Andrew's architectural design again here. Tried to think about security and added public and private subnets for security [https:lucid.app/lucidchart/78f59885-480f-4b05-80f9-c67ae7411633/edit?viewport_loc=-7%2C55%2C1869%2C1532%2C0_0&invitationId=inv_d811feb0-e127-4b3d-bc7f-511d31276c56](lucidchart/78f59885-480f-4b05-80f9-c67ae7411633/edit?viewport_loc=-7%2C55%2C1869%2C1532%2C0_0&invitationId=inv_d811feb0-e127-4b3d-bc7f-511d31276c56)
+# Architecture Diagrams
+
+Alright, buckle up folks, because we're about to dive into the heart of this project. We're talking about an ephemeral-first micro-blogging platform, designed for those who want to make a statement without a permanent online presence.This platform is all about embracing the moment, with anything you upload expiring after just a few days. It's the perfect solution for those who want to share their thoughts and experiences without leaving a digital footprint behind.
+
+Now is probably the best time for a disclaimer: I AM NOT A SOLUTIONS ARCHITECT... YET, I AM HERE TO LEARN! So, if you see anything that looks wonky, just remember - I'm not a professional yet.
+
+Now, I may have taken a few liberties with these diagrams and borrowed some (most **cough**) ideas from class demos, but hey, imitation is the sincerest form of flattery, right? On the real though, our instructors are super chill, not only do they not mind, they encouraged the plagerism lol
+
+Anyways, we move...
+
+##### Requirements
+
+* Micro services
+* Frontend using JS with React
+* Backend using Python with flask
+* APIs
+* User Authentication
+* Caching system of sorts
+
+###### The concept?
+
+![Conceptual Diagram](https://user-images.githubusercontent.com/65119027/219788115-00b208b8-03db-4a40-88b5-bca73cf64fce.png)
+
+###### And the Logic?
+
+![Logical Diagram](https://user-images.githubusercontent.com/65119027/219790466-46f4f103-57e2-4606-9060-ef189bfb043a.png)
+
+
+# Up next?
+
+Docker and Containerization. Let's do it!!
+
+
+Thanks again Andrew..
