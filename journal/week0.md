@@ -6,9 +6,9 @@ Now, to make sure I don't go over our usage and costs, I've set up some handy to
 
 ## Completed Assignments:
 
-##### Setting up Account & Billing Alerts
+## Setting up Account & Billing Alerts
 
-###### IAM & Access Keys
+### IAM & Access Keys
 
 We're responsible for considering security concerns, even if it's not a top priority. It's better to have it built into the design from the start. For me, I chose some AWS security services like IAM for access control, Cognito for user authentication, and public and private subnets. I'll go into detail on Cognito and subnets later, but first let me explain how I set up my account:
 
@@ -20,7 +20,7 @@ I also created Access Keys, which give programmatic access to the account. I'm u
 
 ![ProgrammaticAccess For IAM](https://user-images.githubusercontent.com/65119027/219777245-cf34d7c6-6028-457b-9629-7b898906479b.png)
 
-###### Billing Alerts
+### Billing Alerts
 
 1. I set my monthly budget at $20, which is pretty low, but I can always adjust it if needed. I also set up a usage alarm for EC2 instances to keep track of any unexpected spikes.
 
@@ -30,7 +30,7 @@ I also created Access Keys, which give programmatic access to the account. I'm u
 
 ![CloudWatchBillingAlarm](https://user-images.githubusercontent.com/65119027/219780203-0675cf0b-ff89-47a6-9371-9ffea340cffe.png)
 
-###### Gitpod
+### Gitpod
 
 Gitpod is such a game-changer for me. It's basically a cloud-based IDE that lets you do all your coding, testing, and deployment from the comfort of your web browser! The best part is that it's super easy to use and has some amazing features like workspace sharing, automated backups, and collaboration tools. Plus, it integrates with all the fav tools like GitHub, GitLab and whatnot! Clutch!
 
@@ -44,7 +44,7 @@ To get Gitpod on GitHub, go to GitHub Marketplace and install the Gitpod extensi
 
 ![Gitpod extension](https://user-images.githubusercontent.com/65119027/219779314-681eb93f-2ab6-4ff5-98a5-bf9519929d27.png)
 
-###### Cloudshell
+### Cloudshell
 
 Next task, Cloudshell. Since attempting a Linux course (which I will get back to at some point), I have been obsessed with doing EVERYTHING in the in CLI. Not a reason to base a career choice on but it's one of the main reasons I want to get into DevOps lol. Anyway...AWS Cloudshell. What is it you may (not) ask?
 
@@ -60,7 +60,7 @@ Now, I may have taken a few liberties with these diagrams and borrowed some (mos
 
 Anyways, we move...
 
-##### Requirements
+#### Requirements
 
 * Micro services
 * Frontend using JS with React
@@ -69,11 +69,11 @@ Anyways, we move...
 * User Authentication
 * Caching system of sorts
 
-###### The concept?
+####The concept?
 
 ![Conceptual Diagram](https://user-images.githubusercontent.com/65119027/219788115-00b208b8-03db-4a40-88b5-bca73cf64fce.png)
 
-###### And the Logic?
+#### And the Logic?
 
 ![Logical Diagram](https://user-images.githubusercontent.com/65119027/219790466-46f4f103-57e2-4606-9060-ef189bfb043a.png)
 
