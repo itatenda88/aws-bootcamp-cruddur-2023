@@ -1,31 +1,53 @@
 # Week 0 — Billing and Architecture
 
-This week's tasks are mainly around billing for the AWS services we will use during the course.
+Hey there! So for this week has been about billing for the AWS services we'll be using throughout the bootcamp. And let me tell you, the pricing of these services really depends on which region you select. I did some digging and found out that Northern Virginia and Ohio are the cheapest, followed by Oregon and Mumbai. Of course, there are other things to consider when making this decision, but I will be basing my decision on  pricing and service availability.
 
-I'm aware that the pricing of AWS services heavily depends on the regions you choose, with Nothern Virginia and Ohio being the cheapest, followed by Oregon and Mumbai. There are many other considerations when picking regions but I will be basing my decision on pricing and availability of the services I know we will be using. There are tools in AWS that are useful for tracking usage and cost. I have chosen billing alerts and CloudWatch alarms for this purpose.
-
-My Account is fairly new, it's still eligible for the free tier on all services with the offering. Alerts and Alarms will notify me if I go near and over limits I have set for myself.
+Now, to make sure I don't go over our usage and costs, I've set up some handy tools within AWS, like Budget Alerts and a CloudWatch Alarm with SNS to send me notifications. And the best part? Since my account is still pretty new, I can use some of these services for free under the free tier! But just in case, these alerts and the alarm will keep me in the loop so there won't be any unexpected surprises. Unless, of course, I forget to check my email :D
 
 ## Completed Assignments:
 
-Not making excuses but I'm juggling this boot camp and a heavy work schedule while also preparing for an SAA exam. I won't have much time to journal in detail but rather just summarize tasks in the order that I complete them. This week's homework was divided into "would be great ifs" and "must dos". There is a list of tasks that you MUST complete and optional tasks that would be great if you can do them as they will provide you a better understanding of the project and knowledge of AWS's best practices. I plan on completing as much time allows.
-
 ##### Setting up Account & Billing Alerts
 
-###### IAM
+###### IAM & Access Keys
 
-Instructors have sort of left security concerns and considerations to us, it's not a super high priority for the project we are building but certainly shouldn't be ignored. Best to build it into the architectural design and account set up from the jump. I have chosen a few security services available in AWS, IAM for access control, Cognito for user authentication and use of public and private subnets. I will touch on cognito and subnets later, first here is how I set up the account:
+We're responsible for considering security concerns, even if it's not a top priority. It's better to have it built into the design from the start. For me, I chose some AWS security services like IAM for access control, Cognito for user authentication, and public and private subnets. I'll go into detail on Cognito and subnets later, but first let me explain how I set up my account:
 
-1. Like I mentioned, I already have an AWS account that has a single IAM User I created a while ago. This is the IAM  account I will be using throughout the course. Permissions will be granted to the account as and when needed and this week only billing permission is required. To achieve this, I created a Role and attached it to an admin group that I added the user to. See the images below.
+I had an existing AWS account with a single IAM User that I created a while back. I'll be using this account throughout the course and have add permissions as needed. For now, I only needed billing permission, so I created a Role and attached it to an admin group, then added my user to that group. Oh, and enabled MFA for extra layer of security.
 
-2. Created Access Keys to give users programmatic access to the account. This is the key I'm using in gitpod to access and control my AWS environment
+
+![](assets/20230217_191830_IAM_User with MFA enabled.png)
+
+
+I also created Access Keys, which give programmatic access to the account. I'm using these keys in gitpod to control my AWS environment.
+
+
+![](assets/20230217_191921_ProgrammaticAccess_For IAM.png)
+
 
 ###### Billing Alerts
 
-1. My monthly budget is currently set at $20, pretty low, will change it if needed. Have also set up a usage alarm for EC2 instances (insert image)
-2. The budget alert can function as a billing alarm, but wanted to get some practice on CloudWatch to see how it works and how it's configured. I set up a single billing alarm and opted for SNS for notification. May disable this if it drives costs up. (insert image)
+1. I set my monthly budget at $20, which is pretty low, but I can always adjust it if needed. I also set up a usage alarm for EC2 instances to keep track of any unexpected spikes.
 
-Installed gitpod extension. A new revelation I was super happy to learn about! Thank you!
+![](assets/20230217_192442_Cost_Usage Budgets.png)
+
+1. While the budget alert can also function as a billing alarm, I wanted to practice using CloudWatch and see how it works. So, I set up a single billing alarm and opted for SNS for notification. I may disable it if it drives up costs, but for now, it's good to have some extra visibility.
+
+![](assets/20230217_192325_CloudWatchBillingAlarm.png)
+
+
+###### Gitpod
+
+So listen, gitpod was a revelation that I was super chuffed to learn about ! Had not heard or used it until this point. To be fair though, I'm new to this field, I have a lot to learn and discover but damn I love this one! If you are just hearing about this tool like me, Gitpod is a cloud-based integrated development environment (IDE) that allows developers to write, test, and deploy code from a web browser. Some of it's advantages include:
+
+* Quick and easy setup
+* Centralized development environment
+* Scalable and flexible
+* Accessible from anywhere with an internet connection
+* Easy collaboration with team members
+
+To get Gitpod extension on your GitHub, just head over to the GitHub Marketplace, look up the Gitpod extension, and install it. After that, you can simply click the "Gitpod" button in any repository to start a fully functional development environment in your web browser. Gitpod automates the configuration process and offers various tools, including automatic workspace backups, collaborative editing, and workspace sharing, to provide a smooth and streamlined development experience.
+
+Cloudshell 
 
 Installed cloudshell in termainal. I'm now able to access my AWS account from the terminal in gitpod(insert image)
 
