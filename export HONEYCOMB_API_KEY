@@ -1,5 +1,5 @@
-export HONEYCOMB_API_KEY="9YYUNxCKg54uBL4PtKeghA"
-gp env HONEYCOMB_API_KEY="9YYUNxCKg54uBL4PtKeghA"
+export HONEYCOMB_API_KEY=""
+gp env HONEYCOMB_API_KEY=""
 
 export HONEYCOMB_SERVICE_NAME="backend-flask"
 gp env HONEYCOMB_SERVICE_NAME="backend-flask"
