@@ -3,3 +3,8 @@ gp env HONEYCOMB_API_KEY="9YYUNxCKg54uBL4PtKeghA"
 
 export HONEYCOMB_SERVICE_NAME="backend-flask"
 gp env HONEYCOMB_SERVICE_NAME="backend-flask"
+
+export OTEL_EXPORTER_OTLP_ENDPOINT="https://api.honeycomb.io"
+export OTEL_EXPORTER_OTLP_HEADERS="x-honeycomb-team=9YYUNxCKg54uBL4PtKeghA"
+export OTEL_SERVICE_NAME="backend-flask"
+python app.py
